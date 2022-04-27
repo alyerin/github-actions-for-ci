@@ -1,1 +1,3 @@
 name: Super Team Awesome Falcon Punch's approval workflow
+
+on: pull_request_review
