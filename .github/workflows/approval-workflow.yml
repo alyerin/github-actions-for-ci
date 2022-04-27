@@ -1,0 +1,14 @@
+name: Super Team Awesome Falcon Punch's approval workflow
+
+on: pull_request_review
+
+jobs:
+  labelWhenApproved:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Change label when approved
+      uses: pullreminders/label-when-approved-action@master
+      env:
+        APPROVALS: "1"
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        ADD_LABEL: "kid-tested, mother approved"
